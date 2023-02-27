@@ -59,7 +59,7 @@ public class TaxPayer {
     public double salaryTax() {
         if ((this.salaryIncome / 12) < 3000.0) {
             return 0;
-        } else if ((this.salaryIncome / 12) >= 3000.0 && (this.salaryIncome / 12) < 5000.0) {
+        } else if ((this.salaryIncome / 12) < 5000.0) {
             return this.salaryIncome * 0.1;
         } else {
             return this.salaryIncome * 0.2;
@@ -76,7 +76,7 @@ public class TaxPayer {
 
     public double capitalTax() {
         if (capitalIncome > 0) {
-            return servicesIncome * 0.2;
+            return capitalIncome * 0.2;
         } else {
             return 0;
         }

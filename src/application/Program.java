@@ -16,6 +16,7 @@ public class Program {
         System.out.print("Quantos contribuintes você vai digitar? ");
         int n = sc.nextInt();
         sc.nextLine();
+        System.out.println();
 
         List<TaxPayer> list = new ArrayList<>();
 
@@ -33,15 +34,16 @@ public class Program {
             double educationSpending = sc.nextDouble();
 
             TaxPayer tPayer = new TaxPayer(salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending);
-
             list.add(tPayer);
+
+            System.out.println();
         }
 
         System.out.println();
 
         for (int i=0;i<n;i++) {
             System.out.printf("Resumo do %do contribuinte:\n", i + 1);
-            System.out.println(list.get(i));
+            System.out.println(list.get(i).toString());
             System.out.println();
         }
 
